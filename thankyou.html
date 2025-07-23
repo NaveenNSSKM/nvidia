@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Techbusinesslive</title>
+     <link rel="shortcut icon" href="https://techbusinesslive.com/wp-content/uploads/2021/07/tbl-fav-32.png" type="image/x-icon" />
+ 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+   
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   
+    body {
+      background-color: #fff;
+      margin: 0;
+      font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 60px;
+      background-image: url('https://techbusinesslive.cloud/redhat/images/bg.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+     
+      display: flex;
+      flex-direction: column;
+    }
+   
+    /* Header styles */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+   
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    /* Main content */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 35px 25px;
+      text-align: center;
+      flex-grow: 1;
+      animation: fadeIn 1s ease-in-out;
+    }
+   
+    .thank-you-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+   
+    .confirmation-icon {
+      width: 80px;
+      height: 80px;
+      background-color: #f0faf0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #05c46b;
+      font-size: 40px;
+      position: relative;
+      animation: pulse 2s infinite;
+    }
+   
+    .confirmation-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+   
+    h1 {
+      color: #ff0000;
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+   
+    .subtitle {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+   
+    .quote {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 30px 0;
+      color: #222;
+    }
+   
+    .download-info {
+      margin: 30px 0;
+      font-size: 20px;
+      color: #444;
+    }
+   
+    .download-notice {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #666;
+    }
+   
+    .download-link {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+   
+    .download-link:hover {
+      text-decoration: underline;
+    }
+   
+    .button-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+   
+    .primary-btn {
+      background-color: #05c46b;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(5, 196, 107, 0.2);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+      animation-delay: 1s;
+    }
+   
+    .primary-btn:hover {
+      background-color: #04a65b;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(5, 196, 107, 0.25);
+    }
+   
+    .social-share {
+      margin-top: 30px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+      animation-delay: 1.4s;
+    }
+   
+    .social-share span {
+      display: block;
+      margin-bottom: 15px;
+      color: #666;
+    }
+   
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+   
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+   
+    .social-icon:hover {
+      background-color: #05c46b;
+      color: white;
+      transform: translateY(-3px);
+    }
+ 
+    /* Footer styles */
+    .footer {
+     background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #eee;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 1000;
+ 
+    }
+   
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+   
+    .copyright {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+   
+    .preferences-link {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+   
+    .preferences-link:hover {
+      text-decoration: underline;
+    }
+   
+    /* Logo styles - FIXED */
+    .logo-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+   
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 40px;
+    }
+   
+    .logo img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+   
+    .logo:first-child img {
+      max-width: 200px;
+    }
+   
+    .logo:last-child img {
+      max-width: 150px;
+    }
+   
+    /* Horizontal line */
+    .divider {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 20px auto;
+      width: 100%;
+    }
+   
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+   
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+   
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(5, 196, 107, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(5, 196, 107, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(5, 196, 107, 0);
+      }
+    }
+   
+    @keyframes confetti {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+   
+    /* Mobile responsiveness - IMPROVED */
+    @media (max-width: 768px) {
+      .header {
+        padding: 15px 20px;
+      }
+     
+      .logo-container {
+        gap: 15px;
+      }
+     
+      .logo {
+        height: 35px;
+      }
+     
+      .logo img {
+        height: 35px;
+      }
+     
+      .logo:first-child img {
+        max-width: 150px;
+      }
+     
+      .logo:last-child img {
+        max-width: 120px;
+      }
+     
+      .thank-you-card {
+        padding: 30px 20px;
+      }
+     
+      h1 {
+        font-size: 26px;
+      }
+     
+      .subtitle {
+        font-size: 16px;
+      }
+     
+      .quote {
+        font-size: 20px;
+      }
+     
+      .button-container {
+        flex-direction: column;
+        gap: 12px;
+      }
+     
+      .primary-btn {
+        width: 100%;
+        padding: 12px 20px;
+      }
+    }
+   
+    @media (max-width: 480px) {
+      .header {
+        padding: 12px 15px;
+      }
+     
+      .logo-container {
+        gap: 10px;
+      }
+     
+      .logo {
+        height: 30px;
+      }
+     
+      .logo img {
+        height: 30px;
+      }
+     
+      .logo:first-child img {
+        max-width: 130px;
+      }
+     
+      .logo:last-child img {
+        max-width: 100px;
+      }
+    }
+   
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #ffd53e;
+      top: 0;
+      animation: confetti 5s ease-in-out forwards;
+      z-index: 999;
+    }
+  </style>
+</head>
+ 
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Techbusinesslive Logo" />
+      </div>
+      <div class="logo">
+        <img src="https://techbusinesslive.cloud/nvidia/Images/NVIDIA_logo.svg.png" alt="thoughtworks-logo" />
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Main Content -->
+  <main class="content">
+    <div class="thank-you-card">
+      <div class="confirmation-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+     
+      <h1>Thank You For Your Interest in:</h1>
+      <p class="quote">AI Factories: Powering the Next Era of AI</p>
+     
+      <div class="download-info">Your download will start automatically...</div>
+     
+     
+      <p>Your download will start shortly.
+<br>If your download doesn't start please <a href="https://blogs.nvidia.com/blog/ai-factory/" style="text-decoration: underline;">click here</a> to download.
+</p>
+     
+     
+    </div>
+  </main>
+ 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="copyright">Copyright © 2025 Techbusinesslive</p>
+      <p>If you would like to change your communication preferences <a href="mailto:info@techbusinesslive.com" class="preferences-link">click here</a>.</p>
+    </div>
+  </footer>
+  <script>
+    // Redirect to the PDF after 3 seconds
+    setTimeout(function() {
+      window.location.href = "https://blogs.nvidia.com/blog/ai-factory/";
+    }, 3000);
+  </script>
+ 
+</body>
+</html>

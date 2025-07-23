@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techbusinesslive</title>
+     <link rel="shortcut icon" href="https://techbusinesslive.com/wp-content/uploads/2021/07/tbl-fav-32.png" type="image/x-icon" />
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+          
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+             font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;
+        }
+       
+        body {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+       
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+       
+        /* Header */
+    .header-banner {
+  padding: 20px 0;
+}
+ 
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+ 
+}
+ 
+.logo {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+ 
+}
+ 
+.right-logo {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+       
+        .endpoint-logo {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+       
+         .banner {
+            background-color: #0a0e2a;
+            color: white;
+            padding: 60px 0;
+           
+            background-size: cover;
+            background-position: center;
+        }
+       
+        .banner h1 {
+            font-size: 2.5rem;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+       
+        .main-content {
+            display: flex;
+            padding: 40px 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-family: 'Lexend Deca', 'Helvetica Neue', Helvetica, sans-serif;
+        }
+       
+        .content {
+            flex: 2;
+            min-width: 300px;
+        }
+       
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+        }
+       
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+       
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+        }
+       
+        p {
+            margin-bottom: 15px;
+        }
+       
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+       
+        li {
+            margin-bottom: 10px;
+        }
+       
+        .highlight {
+            font-weight: bold;
+        }
+       
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+       
+        /* Form Styles */
+        .form-container {
+            background-color: #eeeeee;
+            border-radius: 8px;
+            width: 100%;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+       
+        .form-header {
+            margin-bottom: 20px;
+        }
+       
+        .form-header h2 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+       
+        .form-group {
+            margin-bottom: 15px;
+        }
+       
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+       
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+       
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+       
+        .submit-btn {
+            background-color: rgb(118, 185, 0);
+            color: black;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+       
+        .submit-btn:hover {
+            background-color: rgb(142, 219, 9);
+        }
+       
+        .footer-link {
+            color: #1e3a8a;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+ 
+        /* Responsive styles */
+        @media screen and (max-width: 820px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+           
+            .banner h1 {
+                font-size: 2rem;
+            }
+           
+            .main-content {
+                flex-direction: column;
+                padding: 50px 20px;
+            }
+           
+            .content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+           
+            h2 {
+                font-size: 1.6rem;
+            }
+           
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+       
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+           
+            .banner {
+                padding: 40px 0;
+            }
+           
+            .banner h1 {
+                font-size: 1.7rem;
+            }
+           
+            h2 {
+                font-size: 1.4rem;
+            }
+           
+            h3 {
+                font-size: 1.2rem;
+            }
+            .main-content {
+                flex-direction: column;
+                padding: 50px 20px;
+            }
+           
+            .form-container {
+                padding: 20px 15px;
+            }
+        }
+
+   .banner {
+  background-image: url('http://techbusinesslive.cloud/nvidia/Images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.banner-content {
+  padding: -10px 20px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* left-align */
+  max-width: 550px;        /* reduced width */
+}
+
+.banner-heading {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 2em;
+  padding: 0 40px;
+}
+
+/* Optional media queries for finer control */
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 30px 0px;
+    min-height: 250px;
+  }
+
+  .banner-heading {
+    font-size: 1.1rem;
+    text-align: start;
+  }
+
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .banner {
+     background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+   
+  }
+
+  .banner-content {
+    text-align: start;
+    
+  }
+
+  .banner-heading {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
+       
+    </style>
+</head>
+<body>
+     <!-- Header -->
+    <div class="header-banner">
+  <div class="logo-container">
+    <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Left Logo" class="logo" />
+    <img src="https://techbusinesslive.cloud/nvidia/Images/NVIDIA_logo.svg.png" alt="Right Logo" class="logo right-logo" />
+  </div>
+</div>
+<div class="banner">
+  <div class="banner-content">
+    <h1 class="banner-heading">
+      AI Factories: Powering the Next Era of AI
+    </h1>
+  </div>
+</div>
+
+ 
+   
+    <div class="container main-content">
+        <div class="content">
+           
+           
+ 
+         
+           
+            <h3>Scale AI Innovation with NVIDIA’s Purpose-Built Infrastructure</h3>
+            <p>Traditional data centers weren’t built for AI. NVIDIA’s <strong>AI Factories</strong> are purpose-engineered to deliver the performance, efficiency, and scale needed for AI reasoning, agentic AI, and high-volume inference. From on-premises to cloud, NVIDIA helps enterprises manufacture intelligence faster and more efficiently — with greater ROI.</p>
+           
+            <h3>Why NVIDIA AI Factories?</h3>
+          <h4>Faster Time to Value</h4>
+          <p> Deploy AI-ready infrastructure with pre-engineered, validated designs to accelerate time-to-intelligence.</p>
+           
+          <h4>Maximum Performance & Efficiency</h4>
+          <p> Achieve more AI output with fewer resources using NVIDIA’s industry-leading accelerated computing.</p>
+          <h4>End-to-End Ecosystem</h4>
+          <p> Full-stack solutions delivered through NVIDIA’s trusted network of technology and cloud partners.</p>
+          <h4>Scalable & Future-Ready</h4>
+          <p>Modular, upgrade-friendly infrastructure designed for long-term AI growth.</p>
+          <h3>AI Factory Infrastructure:</h3>
+          <ul>
+            <li><strong>RTX PRO Servers</strong> — Enterprise-grade AI with Blackwell GPUs for 5x performance gains.</li>
+          <li><strong>DGX Cloud</strong> — AI factory in the cloud, optimized for every workload.</li>
+        <li><strong>Blackwell Platform</strong> — Next-gen AI reasoning, training, and inference.</li>
+        </ul>
+
+        <h3>Build AI Faster, Smarter:</h3>
+        <ul>
+            <li>Scalable AI inference platforms</li>
+            <li>High-bandwidth networking</li>
+            <li>Ready-to-deploy AI models and workflows</li>
+        </ul>
+        </div>
+       
+        <div class="sidebar">
+             <div class="form-container">
+                <div class="form-header">
+                    <h2>Request Information</h2>
+                   
+                </div>
+                <form id="my-form" data-toggle="validator" action="https://formspree.io/f/xblkgdoy" role="form" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="number" id="phone" name="phone" required oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+
+                    </div>
+                   
+                     <div class="form-group">
+                        <label for="job titles">Job Titles*</label>
+                        <input type="text" id="job" name="job" required>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="company">Company Name*</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+
+                   
+                   
+                    
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+    <footer>
+        <div class="container">
+            <p class="copyright">Copyright © 2025 Techbusinesslive</p>
+      <p>If you would like to change your communication preferences <a href="mailto:info@techbusinesslive.com" class="preferences-link">click here</a>.</p>
+        </div>
+    </footer>
+   
+
+      <script type="text/javascript">
+         var form = document.getElementById("my-form");
+            
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var status = document.getElementById("my-form-status");
+              var data = new FormData(event.target);
+              fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+              }).then(response => {
+            document.location.href="https://techbusinesslive.cloud/nvidia/tp.html";
+                form.reset()
+              }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              });
+            }
+            form.addEventListener("submit", handleSubmit)   
+      </script>
+</body>
+</html>
