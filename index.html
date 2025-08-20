@@ -40,27 +40,29 @@
   align-items: center;
   max-width: 1150px;
   margin: 0 auto;
- 
 }
- 
+
 .logo {
   max-width: 120px;
   width: 100%;
   height: auto;
- 
 }
- 
+
 .right-logo {
-  max-width: 150px;
-  width: 100%;
-  height: auto;
+  max-width: 100px;
+  margin-left: 10px;
 }
-       
-        .endpoint-logo {
-            height: 40px;
-            margin-bottom: 10px;
-        }
-       
+
+.right-logos {
+  display: flex;
+  align-items: center;
+}
+
+.endpoint-logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
          .banner {
             background-color: #0a0e2a;
             color: white;
@@ -316,21 +318,57 @@
     text-align: left;
   }
 }
+
+ .privacy-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 15px;
+  color: #1b0a1f; /* matching Capgemini's form text color */
+}
+
+.privacy-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.privacy-checkbox label {
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.privacy-checkbox a {
+  color: blue;
+  text-decoration: none;
+}
+
+
        
     </style>
 </head>
 <body>
      <!-- Header -->
     <div class="header-banner">
-  <div class="logo-container">
-    <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Left Logo" class="logo" />
-    <img src="https://techbusinesslive.cloud/nvidia/Images/NVIDIA_logo.svg.png" alt="Right Logo" class="logo right-logo" />
+ <div class="logo-container">
+  <!-- Left Logo -->
+  <img src="https://techbusinesslive.cloud/redhat/images/techbusinesslive-logo-1.png" alt="Left Logo" class="logo" />
+
+  <!-- Right Side Logos (NVIDIA + logo-2) -->
+  <div class="right-logos">
+    <img src="https://techbusinesslive.cloud/nvidia/Images/ccs.jpg" alt="NVIDIA Logo" class="logo right-logo" />
+    <img src="https://techbusinesslive.cloud/nvidia/Images/NVIDIA-Logo.png" alt="Logo 2" class="logo right-logo" />
   </div>
+</div>
+
 </div>
 <div class="banner">
   <div class="banner-content">
     <h1 class="banner-heading">
-      AI Factories: Powering the Next Era of AI
+    Power the Future of Intelligence with NVIDIA AI Factory
     </h1>
   </div>
 </div>
@@ -344,32 +382,52 @@
  
          
            
-            <h3>Scale AI Innovation with NVIDIA’s Purpose-Built Infrastructure</h3>
-            <p>Traditional data centers weren’t built for AI. NVIDIA’s <strong>AI Factories</strong> are purpose-engineered to deliver the performance, efficiency, and scale needed for AI reasoning, agentic AI, and high-volume inference. From on-premises to cloud, NVIDIA helps enterprises manufacture intelligence faster and more efficiently — with greater ROI.</p>
+            <h3>AI at Industrial Scale Starts Here</h3>
+            <p>Today’s enterprises need more than just data centers — they need <strong>AI factories</strong>. NVIDIA AI Factory transforms raw data into intelligence at scale, turning AI from a long-term vision into a real-time business advantage.</p>
            
-            <h3>Why NVIDIA AI Factories?</h3>
+            <h3>Why AI Factories?</h3>
+
           <h4>Faster Time to Value</h4>
-          <p> Deploy AI-ready infrastructure with pre-engineered, validated designs to accelerate time-to-intelligence.</p>
+          <p>Deploy pre-engineered, secure AI infrastructure and generate intelligence from day one.</p>
            
-          <h4>Maximum Performance & Efficiency</h4>
-          <p> Achieve more AI output with fewer resources using NVIDIA’s industry-leading accelerated computing.</p>
-          <h4>End-to-End Ecosystem</h4>
-          <p> Full-stack solutions delivered through NVIDIA’s trusted network of technology and cloud partners.</p>
-          <h4>Scalable & Future-Ready</h4>
-          <p>Modular, upgrade-friendly infrastructure designed for long-term AI growth.</p>
-          <h3>AI Factory Infrastructure:</h3>
+          <h4>Maximum Efficiency</h4>
+          <p>More AI performance per watt, driving smarter outcomes with less energy.</p>
+          <h4>Full-Stack Simplicity</h4>
+          <p> Hardware, networking, and software in one integrated solution — no gaps, no silos.</p>
+          <h4>Enterprise-Ready & Scalable</h4>
+          <p>From on-prem to cloud, scale as you grow with modular, upgrade-ready infrastructure.</p>
+
+          <h3>What’s Inside an NVIDIA AI Factory?</h3>
           <ul>
-            <li><strong>RTX PRO Servers</strong> — Enterprise-grade AI with Blackwell GPUs for 5x performance gains.</li>
-          <li><strong>DGX Cloud</strong> — AI factory in the cloud, optimized for every workload.</li>
-        <li><strong>Blackwell Platform</strong> — Next-gen AI reasoning, training, and inference.</li>
+            <li><strong>Accelerated Computing</strong> with RTX Pro & Blackwell GPUs</li>
+          <li><strong>DGX Cloud</strong>for AI at scale — anytime, anywhere</li>
+        <li><strong>Blackwell Platform</strong> optimized for reasoning & high-volume inference</li>
+        <li><strong>Validated Software Stack</strong> including NVIDIA AI Enterprise & Omniverse™</li>
         </ul>
 
-        <h3>Build AI Faster, Smarter:</h3>
+        <h3>Built for the Entire AI Lifecycle</h3>
         <ul>
-            <li>Scalable AI inference platforms</li>
-            <li>High-bandwidth networking</li>
-            <li>Ready-to-deploy AI models and workflows</li>
+            <li>Data Ingestion</li>
+            <li>Model Training & Fine-Tuning</li>
+            <li>Long-Context, High-Volume Inference</li>
+            <li>Secure, Composable Deployments</li>
+            <li>Seamless Upgrades</li>
         </ul>
+
+
+
+        <h3>Outcomes That Matter</h3>
+        <ul>
+            <li>Accelerate time-to-intelligence</li>
+            <li>Unlock new AI capabilities faster</li>
+            <li>Reduce TCO with integrated infrastructure</li>
+            <li>Future-proof investments with a broad partner ecosystem</li>
+        </ul>
+
+
+<h3>Ready to Build Your AI Factory?</h3>
+<p>NVIDIA AI Factory is your competitive edge in the AI-driven future. Whether on-prem or in the cloud, take the next step in scalable, efficient AI infrastructure.</p>
+
         </div>
        
         <div class="sidebar">
@@ -377,6 +435,8 @@
                 <div class="form-header">
                     <h2>Request Information</h2>
                    
+                    <p>By filling out the form, you agree to share your data with our partner, NVIDIA. Your information will be
+handled in accordance with <a style="text-decoration: none;" href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/">NVIDIA&#39;s Privacy Policy.</a> </p>
                 </div>
                 <form id="my-form" data-toggle="validator" action="https://formspree.io/f/xblkgdoy" role="form" method="post">
                     <div class="form-group">
@@ -403,7 +463,14 @@
                         <input type="text" id="company" name="company" required>
                     </div>
 
-                   
+                   <div class="privacy-checkbox">
+  <input type="checkbox" id="privacy" required />
+  <label for="privacy">
+   Send me the latest enterprise news, announcements and more from NVIDIA. I can unsubscribe at any
+time. Your information will be handled in accordance with
+    <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">NVIDIA&#39;s Privacy Policy.</a>.
+  </label>
+</div>
                    
                     
                     <button type="submit" class="submit-btn">Submit Request</button>
